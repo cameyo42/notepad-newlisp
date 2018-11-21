@@ -1,0 +1,68 @@
+Add newlisp syntax highlight
+============================
+
+Copy all the text of the file: newlisp-udl.xml
+and paste it inside the section: <NotepadPlus> ... </NotepadPlus>
+of the file: userDefineLang.xml (located at: c:\Users\<username>\AppData\Roaming\Notepad++\)
+
+Example
+<NotepadPlus>
+    <UserLang name="newLISP" ext="lsp" udlVersion="2.1">
+    ...
+    </UserLang>
+</NotepadPlus>    
+
+The newlisp keywords from primes.h (newlisp source).
+
+The actual highlight colors are for "obsidiane" theme of notepad++.
+
+You can change (easily) the colors as you like.
+
+
+Open newlisp help from notepad++
+================================
+
+Add the line: <Command name="newLISP Help" Ctrl="yes" Alt="yes" Shift="no" Key="112">chrome file:///C:/Program%20Files%20(x86)/newlisp/newlisp_manual.html#$(CURRENT_WORD)</Command>
+inside the section: <UserDefinedCommands> ... </UserDefinedCommands>
+of the file: shortcut.xml (located at: c:\Users\<username>\AppData\Roaming\Notepad++\)
+
+Example
+<UserDefinedCommands>
+    <Command name="newLISP Help" Ctrl="yes" Alt="yes" Shift="no" Key="112">chrome file:///C:/Program%20Files%20(x86)/newlisp/newlisp_manual.html#$(CURRENT_WORD)</Command>
+    
+</UserDefinedCommands>
+
+Note: change the path to point to your newlisp help file
+
+Now you can select a word and press Ctrl+Alt+F1 to open newlisp help file.
+
+The shortcut is Ctrl+Alt+F1, but you can change it.
+
+
+Execute newlisp code from notepad++
+===================================
+
+Download and install autohotkey (www.autohotkey.com).
+
+Run the script npp-newlisp.ahk (double click it).
+
+Run notepad++
+
+Press Win+F12 to start newlisp REPL
+
+Now, from notepad++, you can:
+
+1) Execute the expression of current line pressing: Left-Shift + Enter
+
+2) Execute a selected block of expression pressing: Right-Shift + Enter
+
+After the execution of the expressions, notepad++ is the active application.
+
+Note: 
+When selecting a block of expression be sure to begin and end the selection 
+with a blank line (or use [cmd] [/cmd]).
+
+Note: 
+The script npp-newlisp.ahk exchange the brackets () and [] in the keyboard.
+You can edit the file to disable this (you must comment two lines).
+The script also enable other shortcuts... see the source.
