@@ -1,5 +1,5 @@
-Add newlisp syntax highlight
-============================
+Add newlisp syntax highlighting
+===============================
 
 Copy all the text of the file: newlisp-udl.xml
 and paste it inside the section: <NotepadPlus> ... </NotepadPlus>

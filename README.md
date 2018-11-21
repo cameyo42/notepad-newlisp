@@ -2,7 +2,7 @@
 
 A notepad++ bundle to work with newlisp:
 
-  - Add newlisp syntax highlight
+  - Add newlisp syntax highlighting
 
   - Open newlisp help from notepad++
 
