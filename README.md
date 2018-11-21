@@ -1,6 +1,6 @@
-# notepad-newlisp
+# notepadpp-newlisp
 
-A notepad bundle to work with newlisp:
+A notepad++ bundle to work with newlisp:
 
   - Add newlisp syntax highlight
 
