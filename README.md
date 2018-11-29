@@ -7,3 +7,5 @@ A notepad++ bundle to work with newlisp:
   - Open newlisp help from notepad++
 
   - Execute newlisp code from notepad++
+  
+  - Evaluate newlisp expression inside notepad++

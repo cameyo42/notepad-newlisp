@@ -10,7 +10,7 @@ Example
     <UserLang name="newLISP" ext="lsp" udlVersion="2.1">
     ...
     </UserLang>
-</NotepadPlus>    
+</NotepadPlus>
 
 The newlisp keywords from primes.h (newlisp source).
 
@@ -29,7 +29,7 @@ of the file: shortcut.xml (located at: c:\Users\<username>\AppData\Roaming\Notep
 Example
 <UserDefinedCommands>
     <Command name="newLISP Help" Ctrl="yes" Alt="yes" Shift="no" Key="112">chrome file:///C:/Program%20Files%20(x86)/newlisp/newlisp_manual.html#$(CURRENT_WORD)</Command>
-    
+
 </UserDefinedCommands>
 
 Note: change the path to point to your newlisp help file
@@ -58,11 +58,55 @@ Now, from notepad++, you can:
 
 After the execution of the expressions, notepad++ is the active application.
 
-Note: 
-When selecting a block of expression be sure to begin and end the selection 
+Note:
+When selecting a block of expression be sure to begin and end the selection
 with a blank line (or use [cmd] [/cmd]).
 
-Note: 
+
+Evaluate newlisp expression within notepad
+==========================================
+
+Select an expression and press Ctrl+F8.
+This run the command: newlisp -e "expression"
+and return the result on notepad++ console.
+
+How to do:
+Install NppExec plugin
+Menu: Plugin -> NppExec -> Console Output... (set both console to UTF8)
+Menu: Plugin -> NppExec -> Execute...
+insert text: newlisp -e "$(CURRENT_WORD)"
+Press "Save" button and name it "eval newLISP".
+Close and restart notepad++
+Menu: Plugin -> NppExec -> Advanced Options...
+Press "Associated Script" and select "eval newLISP"
+Set "Item Name" to "eval newLISP".
+Press "Add/Modify" button.
+Activate the checkbox "Place to the Macros submenu".
+Close and restart notepad++
+Menu: Settings -> Shortcut Mapper...
+Press "Plugin" button and search the processing item.
+Select the command "eval newLISP".
+Press Modify and Assign a shortcut.
+Now you can eval selected expression from Macro menu or with the shortcut.
+
+
+A shortcut to insert [cmd] [/cmd]
+Ctrl + Alt + =
+=================================
+
+You can easily register a macro to insert:
+
+[cmd]
+
+[/cmd]
+
+and put the cursor between them.
+Then you can assigna shortcut to your macro.
+
+
+NOTE:
+=====
 The script npp-newlisp.ahk exchange the brackets () and [] in the keyboard.
 You can edit the file to disable this (you must comment two lines).
 The script also enable other shortcuts... see the source.
+
